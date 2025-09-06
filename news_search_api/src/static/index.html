@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm Kiếm Tin Tức Việt Nam</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-newspaper"></i>
+                    <h1>NewsSearch</h1>
+                </div>
+                <div class="header-info">
+                    <span class="powered-by">Powered by Nhóm 7</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Search Section -->
+            <section class="search-section">
+                <div class="search-container">
+                    <h2 class="search-title">Tìm kiếm tin tức Việt Nam</h2>
+                    <p class="search-subtitle">Sử dụng thuật toán TF-IDF để tìm kiếm thông tin chính xác</p>
+                    
+                    <form class="search-form" id="searchForm">
+                        <div class="search-input-container">
+                            <input 
+                                type="text" 
+                                id="searchInput" 
+                                class="search-input" 
+                                placeholder="Nhập từ khóa tìm kiếm..."
+                                autocomplete="off"
+                            >
+                            <button type="submit" class="search-button">
+                                <i class="fas fa-search"></i>
+                                <span>Tìm kiếm</span>
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Search Suggestions -->
+                    <div class="search-suggestions">
+                        <span class="suggestions-label">Gợi ý:</span>
+                        <div class="suggestions-list">
+                            <button class="suggestion-tag" data-query="COVID-19">COVID-19</button>
+                            <button class="suggestion-tag" data-query="chứng khoán">Chứng khoán</button>
+                            <button class="suggestion-tag" data-query="bóng đá">Bóng đá</button>
+                            <button class="suggestion-tag" data-query="giáo dục">Giáo dục</button>
+                            <button class="suggestion-tag" data-query="pháp luật">Pháp luật</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Loading -->
+            <div class="loading" id="loading">
+                <div class="loading-spinner"></div>
+                <p>Đang tìm kiếm...</p>
+            </div>
+
+            <!-- Results Section -->
+            <section class="results-section" id="resultsSection">
+                <div class="results-header">
+                    <h3 class="results-title">Kết quả tìm kiếm</h3>
+                    <div class="results-info">
+                        <span id="resultsCount">0</span> kết quả cho "<span id="searchQuery"></span>"
+                    </div>
+                </div>
+                
+                <div class="results-container" id="resultsContainer">
+                    <!-- Results will be inserted here -->
+                </div>
+
+                <!-- No Results -->
+                <div class="no-results" id="noResults">
+                    <i class="fas fa-search"></i>
+                    <h3>Không tìm thấy kết quả</h3>
+                    <p>Thử sử dụng từ khóa khác hoặc kiểm tra lại chính tả</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p>&copy; 2025 NewsSearch. Hệ thống tìm kiếm tin tức với thuật toán TF-IDF.</p>
+                </div>
+                <div class="footer-stats">
+                    <div class="stat-item">
+                        <span class="stat-value" id="totalDocs">-</span>
+                        <span class="stat-label">Bài báo</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="vocabSize">-</span>
+                        <span class="stat-label">Từ vựng</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
