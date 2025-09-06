@@ -57,15 +57,6 @@ Mở trình duyệt và truy cập: `http://localhost:5000`
 - Text processing cơ bản không cần external libraries
 - Phù hợp cho deployment
 
-## 📊 Dữ Liệu Mẫu
-
-Hệ thống bao gồm 5 bài báo mẫu về các chủ đề:
-- Pháp luật: Vụ cướp tiệm vàng
-- Kinh tế: VN-Index chứng khoán
-- Sức khỏe: COVID-19
-- Thể thao: Bóng đá Việt Nam
-- Giáo dục: Điểm chuẩn đại học
-
 ## 🔍 Cách Sử Dụng
 
 1. **Tìm kiếm**: Nhập từ khóa vào ô tìm kiếm
